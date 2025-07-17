@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-scroll";
 
 const Navbar = () => {
-  const NAVBAR_HEIGHT_OFFSET = -70; 
+  const NAVBAR_HEIGHT_OFFSET = -30; 
 
   return (
     <nav className="navbar navbar-expand-lg fixed-top navbar-custom-grey">
@@ -13,8 +13,8 @@ const Navbar = () => {
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto">
+        <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul className="navbar-nav">
             <li className="nav-item">
                 <Link activeClass="active" to="home" smooth duration={300} className="nav-link" offset={NAVBAR_HEIGHT_OFFSET}>Home</Link> 
             </li>

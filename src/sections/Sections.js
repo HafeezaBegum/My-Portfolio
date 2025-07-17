@@ -29,12 +29,12 @@ const ProjectDescription = ({ text, maxLength }) => {
 
 const Sections = () => {
   return (
-<div className="container mt-5 pt-5">
+<div className="container mt-5 pt-5 main-content-container">
       {/* Home Section */}
-      <section id="home" className="d-flex align-items-center justify-content-between py-5 gap-5">
+      <section id="home" className="d-flex align-items-center justify-content-between py-0.9 mb-1 gap-3">
         {/* Left Side: Introduction */}
         <div className="text-start">
-          <h1 className="fw-bold display-4" style={{ fontFamily: "'Poppins', sans-serif", color: "#000" }}>
+          <h1 className="fw-bold display-5" style={{ fontFamily: "'Poppins', sans-serif", color: "#000" }}>
             Hi, I'm <span style={{ fontWeight: "bold" }}>Hafeeza Begum</span>
           </h1>
           <p className="description-text mt-3 text-justify">
@@ -49,15 +49,15 @@ const Sections = () => {
           </p>
 
           {/* Social Icons */}
-          <div className="mt-4">
+          <div className="mt-3">
             <a href="https://www.linkedin.com/in/hafeezabegum/" target="_blank" rel="noopener noreferrer" className="me-3">
-              <FaLinkedin size={35} color="#0077B5" />
+              <FaLinkedin size={30} color="#0077B5" />
             </a>
             <a href="https://github.com/HafeezaBegum" target="_blank" rel="noopener noreferrer" className="me-3">
-              <FaGithub size={35} color="#000" />
+              <FaGithub size={30} color="#000" />
             </a>
             <a href="mailto:hxd314@case.edu" target="_blank" rel="noopener noreferrer">
-              <FaEnvelope size={35} color="#D44638" />
+              <FaEnvelope size={30} color="#D44638" />
             </a>
           </div>
         </div>
@@ -66,7 +66,7 @@ const Sections = () => {
         <div>
           <img src={myPhoto} alt="Hafeeza Begum Dudekula"
                className="shadow-lg ms-4"
-               style={{ width: "300px", height: "300px", objectFit: "cover", borderRadius: "50%", display: "block" }} />
+               style={{ width: "220px", height: "220px", objectFit: "cover", borderRadius: "50%", display: "block" }} />
         </div>
 
       </section>
@@ -79,7 +79,7 @@ const Sections = () => {
           {/* Case Western Reserve University Card */}
           <div className="col-12">
             <div className="card h-100 shadow bg-white p-4 hover-shadow-lg transition-300ms">
-              <div className="d-flex align-items-start mb-5" style={{ textAlign: "justify" }}>
+              <div className="d-flex align-items-start mb-3" style={{ textAlign: "justify" }}>
                 <a href="https://case.edu" target="_blank" rel="noopener noreferrer">
                   <img
                     src={caseLogo}
@@ -89,7 +89,7 @@ const Sections = () => {
                   />
                 </a>
                 <div>
-                  <h4 className="university-name mb-1" style={{ fontSize: "1.4rem" }}>
+                  <h4 className="university-name mb-1" >
                     <a
                       href="https://case.edu"
                       target="_blank"
@@ -100,9 +100,9 @@ const Sections = () => {
                     </a>
                   </h4>
                   <p className="mb-1"><strong>Master of Science in Computer Science</strong></p>
-                  <p>2023 – 2025 | CGPA: 3.6 / 4</p>
-                  <p className="relevant-coursework text-justify description-text">
-                    <strong>Relevant Coursework:</strong> Artificial Intelligence, Machine Learning on Graphs, Probabilistic Graphical Models, Data Privacy, Database Systems, Computer Security, Software Engineering, High-Performance Data & Computing, High-Performance Systems for AI
+                  <p style={{ fontSize: "0.85rem" }}>2023 – 2025 | CGPA: 3.6 / 4</p>
+                  <p className="relevant-coursework description-text">
+                    <strong>Relevant Coursework:</strong> Artificial Intelligence, Machine Learning on Graphs, AI: Probabilistic Graphical Models, Data Privacy, Database Systems, Computer Security, Software Engineering, High Performance Data & Computing, Designing High-Performant Systems for AI, Data Science Systems
                   </p>
                 </div>
               </div>
@@ -112,7 +112,7 @@ const Sections = () => {
           {/* BMS College of Engineering Card */}
           <div className="col-12">
             <div className="card h-100 shadow bg-white p-4 hover-shadow-lg transition-300ms">
-              <div className="d-flex align-items-start mb-5" style={{ textAlign: "justify" }}>
+              <div className="d-flex align-items-start mb-3" style={{ textAlign: "justify" }}>
                 <a href="https://www.bmsce.ac.in" target="_blank" rel="noopener noreferrer">
                   <img
                     src={bmsLogo}
@@ -122,7 +122,7 @@ const Sections = () => {
                   />
                 </a>
                 <div>
-                  <h4 className="university-name mb-1" style={{ fontSize: "1.4rem" }}>
+                  <h4 className="university-name mb-1" >
                     <a
                       href="https://www.bmsce.ac.in"
                       target="_blank"
@@ -133,8 +133,8 @@ const Sections = () => {
                     </a>
                   </h4>
                   <p className="mb-1"><strong>Bachelor of Engineering in Electronics and Communication</strong></p>
-                  <p>2019 – 2023 | CGPA: 9.0 / 10</p>
-                  <p className="relevant-coursework text-justify description-text">
+                  <p style={{ fontSize: "0.85rem" }}>2019 – 2023 | CGPA: 9.0 / 10</p>
+                  <p className="relevant-coursework description-text">
                     <strong>Relevant Coursework:</strong> C Programming, Object-Oriented Programming using C++, Python, Data Structures and Algorithms, Machine Learning, Digital Signal Processing, Linear Algebra, Computer Communication Networks, Network Security & Cryptography, Embedded System Design, Microcontrollers, Internet of Things (IoT), Project Management and Finance
                   </p>
                 </div>
@@ -152,9 +152,9 @@ const Sections = () => {
             <h3 className="mb-3">{category.category}</h3>
             <div className="d-flex flex-wrap">
               {category.skills.map((skill, idx) => (
-                <div key={idx} className="text-center mx-3">
-                  <img src={skill.icon} alt={skill.name} className="img-fluid" style={{ width: "50px" }} />
-                  <p className="mt-2">{skill.name}</p>
+                <div key={idx} className="text-center d-flex flex-column align-items-center" style={{ width: "70px", minHeight: "90px", margin: "5px"}}>
+                 <img src={skill.icon} alt={skill.name} style={{ width: "35px", height: "35px", objectFit: "contain" }} />
+                 <p className="mt-2 mb-0" style={{ fontSize: "0.85rem", lineHeight: "1.2", textAlign: "center" }}>{skill.name}</p>
                 </div>
               ))}
             </div>
@@ -187,13 +187,13 @@ const Sections = () => {
                   {/* Read More/Less Description */}
                   <ProjectDescription text={project.description} maxLength={200} />
 
-                  <div className="mt-auto pt-3">
+                  <div className="mt-auto pt-1">
                     <div className="mb-3">
                       {project.technologies.map((tech, idx) => (
                         <span key={idx} className="badge bg-info text-dark rounded-pill me-1 mb-1">{tech}</span>
                       ))}
                     </div>
-                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn btn-dark btn-sm me-2">
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn btn-dark btn-sm me-2 mb-2">
                       <FaGithub className="me-1" /> View on GitHub
                     </a>
                     {project.demo && (
@@ -239,7 +239,7 @@ const Sections = () => {
 
                   <div className="ms-1">
                     <p className="fw-bold mb-1">{exp.title}</p>
-                    <p style={{ fontSize: "0.95rem" }}>
+                    <p style={{ fontSize: "0.85rem" }}>
                       {exp.duration}
                     </p>
 
@@ -252,7 +252,6 @@ const Sections = () => {
                       </div>
                     )}
 
-                    {/* NOW CORRECTLY USING ProjectDescription for Experience Section */}
                     <ProjectDescription text={exp.description} maxLength={250} />
 
                   </div>
@@ -271,11 +270,11 @@ const Sections = () => {
             <div key={idx} className="col">
               <a href={cert.link} target="_blank" rel="noopener noreferrer" className="text-decoration-none text-dark d-block h-100"> 
                 <div className="card h-100 border-0 shadow bg-white text-center p-3 hover-shadow-lg transition-300ms">
-                  <div className="d-flex justify-content-center align-items-center" style={{ height: "100px", marginBottom: "15px" }}>
+                  <div className="d-flex justify-content-center align-items-center" style={{ height: "72px", marginBottom: "15px" }}>
                     <img
                       src={cert.icon}
                       alt={cert.title}
-                      style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }}
+                      style={{ maxWidth: "90%", maxHeight: "100%", objectFit: "contain" }}
                     />
                   </div>
                   <div className="card-body d-flex flex-column justify-content-center p-0"> 
@@ -292,15 +291,15 @@ const Sections = () => {
       {/* Contact Section */}
       <section id="contact" className="p-5 rounded shadow mb-4 bg-light">
         <h2 className="text-center mb-4 display-5 fw-bold">Get in Touch</h2>
-        <p className="text-center lead mb-5">
+        <p className="text-center mb-4" style={{ fontSize: "1rem" }}>
           I would love to hear from you! Whether it is to collaborate on a project, a job opportunity or
           just to have a chat, feel free to drop a message!
         </p>
 
         <div className="row justify-content-center">
           {/* Left Column: Contact Form */}
-          <div className="col-lg-6 col-md-8 mb-4">
-            <div className="card p-4 shadow-sm h-100">
+          <div className="col-lg-6 col-md-8 mb-1">
+            <div className="card p-4 shadow-sm h-100 card-text">
               <form action="https://formspree.io/f/mjkrdkgw" method="POST">
                 <div className="mb-3">
                   <label htmlFor="name" className="form-label">Name</label>
@@ -314,7 +313,7 @@ const Sections = () => {
                   <label htmlFor="message" className="form-label">Message</label>
                   <textarea className="form-control" id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
                 </div>
-                <button type="submit" className="btn btn-success btn-lg w-100">Let's talk</button>
+                <button type="submit" className="btn btn-success btn-md w-100">Let's talk</button>
               </form>
             </div>
           </div>
@@ -323,16 +322,16 @@ const Sections = () => {
           <div className="col-lg-4 col-md-8 mb-4">
             <div className="d-flex flex-column justify-content-center h-100">
               {/* Phone Number */}
-              <div className="card p-3 shadow-sm mb-3 text-center">
+              <div className="card p-2 shadow-sm mb-4 text-center">
                 <a href="tel:+12164827650" className="text-decoration-none text-dark">
-                  <FaPhone size={24} className="me-2" /> +1 216-482-7650
+                  <FaPhone size={18} className="me-2" /> +1 216-482-7650
                 </a>
               </div>
 
               {/* Email ID */}
-              <div className="card p-3 shadow-sm text-center">
+              <div className="card p-2 shadow-sm text-center">
                 <a href="mailto:hxd314@case.edu" className="text-decoration-none text-dark">
-                  <FaEnvelope size={24} className="me-2" /> hxd314@case.edu
+                  <FaEnvelope size={18} className="me-2" /> hxd314@case.edu
                 </a>
               </div>
 
