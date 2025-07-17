@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-scroll";
 
 const Navbar = () => {
-  const NAVBAR_HEIGHT_OFFSET = -30; 
+  const NAVBAR_HEIGHT_OFFSET = -50; 
 
   return (
     <nav className="navbar navbar-expand-lg fixed-top navbar-custom-grey">

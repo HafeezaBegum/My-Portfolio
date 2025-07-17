@@ -120,7 +120,7 @@ h6 {
   border-bottom: 2px solid #ffffff;
 }
 
-.navabr .nav-link.active {
+.navbar .nav-link.active {
   font-weight: bold;
   color: #007bff !important;
   border-bottom: 2px solid #007bff;
