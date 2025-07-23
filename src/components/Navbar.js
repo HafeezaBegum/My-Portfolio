@@ -35,7 +35,7 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
                 <a
-                    href="https://drive.google.com/file/d/13v9oy3FQn6SSkeclABWhR34CiXrHR0s_/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1S9eUkB5Y_CpDxmZpEfWgBaAIxooLw3Cr/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="nav-link"
