@@ -38,14 +38,14 @@ const Sections = () => {
             Hi, I'm <span style={{ fontWeight: "bold" }}>Hafeeza Begum</span>
           </h1>
           <p className="description-text mt-3 text-justify">
-            Welcome to my portfolio! I am a dedicated technologist with a robust background in 
-            Software Engineering, Artificial Intelligence, Machine Learning, and Data Engineering.
-            Leveraging my expertise in advanced algorithm optimization and scalable backend systems, 
-            I architect and deploy intelligent solutions that transform complex data into actionable insights. 
-            My passion lies in building AI-driven applications with robust, scalable architectures and 
-            a keen focus on performance optimization, consistently tackling intricate problems with cutting-edge technology. 
-            Explore my projects to see how I deliver impactful, data-driven innovations. 
-            Let's connect to discuss opportunities in software development, AI/ML, and data science!
+            Welcome to my portfolio! I am a Data Engineer and AI specialist with a strong foundation in building scalable, 
+            production-ready data pipelines, distributed systems, and intelligent data workflows. I specialize in designing end-to-end ETL/ELT architectures, 
+            transforming raw data into clean, reliable, and analytics-ready datasets that power business decisions. 
+            Experienced in working across the full data stack from ingestion and transformation to orchestration, storage, and delivery, 
+            I bring a cloud-native mindset with hands-on experience on Azure, and strong proficiency in Python and SQL. 
+            My background in applied AI and LLMs gives me a unique edge in building data systems that don't just move data, but make it smarter. 
+            I bring a production mindset to every project: clean, modular, well-documented code built for scale, reliability, and long-term maintainability. 
+            Explore my projects to see how I turn complex data challenges into efficient, robust engineering solutions, and let's connect if you're looking for someone who can own the full data stack.
           </p>
 
           {/* Social Icons */}
