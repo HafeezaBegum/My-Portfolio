@@ -1,24 +1,33 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
-const THEME_KEY = "theme";
+// Bumped so older saved values (from when light was the default) are ignored.
+const THEME_KEY = "theme-v2";
 
 function initialTheme() {
   try {
     const saved = localStorage.getItem(THEME_KEY);
     if (saved === "light" || saved === "dark") return saved;
   } catch {}
-  return window.matchMedia?.("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  return "dark";
 }
 
 export function useTheme() {
   const [theme, setTheme] = useState(initialTheme);
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
-    try {
-      localStorage.setItem(THEME_KEY, theme);
-    } catch {}
   }, [theme]);
-  const toggle = useCallback(() => setTheme((t) => (t === "dark" ? "light" : "dark")), []);
+  // Only remember a theme the visitor actually chose.
+  const toggle = useCallback(
+    () =>
+      setTheme((t) => {
+        const next = t === "dark" ? "light" : "dark";
+        try {
+          localStorage.setItem(THEME_KEY, next);
+        } catch {}
+        return next;
+      }),
+    []
+  );
   return [theme, toggle];
 }
 
