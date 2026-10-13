@@ -1,57 +1,83 @@
-import fraudBg from "../assets/FraudDetection.png"; 
-import nlpBg from "../assets/music.png";
-import budgetBg from "../assets/spartanBudget.png";
-import coPurchaseBg from "../assets/Recommendation.png";
-import cnnBg from "../assets/cnn.png";
-import portfolioBg from "../assets/portfolio.png";
-
+// `image` is a key into src/assets/images.js
+// `categories` drive the filter chips in the Projects section.
 const projectsData = [
-     {
-      title: "Interactive Personal Portfolio Website",
-      description: "Developed and deployed a dynamic and responsive personal portfolio website using React.js and Bootstrap. The site features intuitive navigation with smooth scrolling, consistent UI elements across sections (Home, Education, Skills, Experience, Projects, Certifications, Contact), and a responsive design for optimal viewing on various devices. Key functionalities include dynamic content rendering from data, interactive elements like hover effects and 'Read More/Less' for project details, and a functional contact form integrated with Formspree for direct communication. The project demonstrates proficiency in modern front-end development, component-based architecture, and external API integration.",
-      technologies: ["React.js", "Bootstrap 5", "HTML5", "CSS3", "JavaScript", "react-scroll", "react-icons/fa", "Formspree", "GitHub Pages"],
-      github: "https://github.com/HafeezaBegum/My-Portfolio",
-      backgroundImage: portfolioBg,
-      demo: "https://hafeezabegum.github.io/My-Portfolio/"
-    },
-    {
-      title: "Co-Purchasing Analysis and Recommendation System",
-      description: "Explored product recommendations and link prediction using graph-based methodologies on Amazon datasets. Utilized network analysis to examine structural characteristics like degree centrality, betweenness centrality, and clustering coefficient. Employed community detection algorithms, specifically Girvan-Newman and Louvain, to identify clusters of frequently co-purchased products and derive insights into customer behavior. Developed a book recommendation system based on Jaccard similarity and co-purchase patterns. Implemented link prediction using various machine learning models including Graph Neural Networks (SAGEConv), Logistic Regression, Decision Tree, Random Forest, and SVM, with Random Forest demonstrating the best performance.",
-      technologies: ["Python", "NetworkX", "Pandas", "PyTorch Geometric", "Scikit-learn"],
-      github: "https://github.com/HafeezaBegum/Co-Purchasing-Analysis-and-Recommendation-System",
-      backgroundImage: coPurchaseBg
-    },
-    {
-      title: "Machine Learning Pipeline for Robust Fraud Detection",
-      description: "Developed a robust machine learning pipeline for credit card fraud detection, encompassing comprehensive exploratory data analysis (EDA), duplicate record elimination, and missing value imputation. Critically addressed severe class imbalance through SMOTE oversampling to enhance model generalization. Engineered, trained, and evaluated supervised classification models, including Random Forest, XGBoost, and Logistic Regression, achieving near-perfect performance (99.99% ROC AUC). Utilized SHAP (SHapley Additive exPlanations) for model interpretability and feature importance analysis.",
-      technologies: ["Python", "Scikit-learn", "Pandas", "NumPy", "Matplotlib", "Seaborn", "imbalanced-learn", "XGBoost", "SHAP"],
-      github: "https://github.com/HafeezaBegum/Machine-Learning-Pipeline-for-Robust-Fraud-Detection",
-      backgroundImage: fraudBg
-    },
-    {
-      title: "Thematic Song Classification using BERT & Distributed NLP",
-      description: "Trained a BERT-based multi-class classifier on 28,362 song lyrics with 7 one-hot encoded thematic labels (e.g., Sadness, Violence, Romantic), achieving 94% validation accuracy over 3 epochs. Implemented MultiWorkerMirroredStrategy in TensorFlow to scale training across multiple GPUs with synchronized gradient updates via all-reduce, significantly reducing training time. Engineered a complete NLP pipeline with data cleaning, duplicate removal, subword tokenization (WordPiece), attention masking, and sequence truncation (128 tokens) to ensure input quality and model stability.",
-      technologies: ["Python", "NLP", "TensorFlow", "BERT", "HPC"],
-      github: "https://github.com/HafeezaBegum/Thematic-Song-Classification-using-BERT-Distributed-NLP",
-      backgroundImage: nlpBg
-    },
-    {
-      title: "Spartan Budget",
-      description: "A budget tracking application designed to help students manage income, expenses, and account balances by categorizing and logging financial transactions. Features include expense logging with predefined categories (e.g., Food, Rent, Tuition) , tracking account balances , and data visualizations (pie charts and bar graphs) for financial health. The application also includes student-targeted features such as a shared expense tracker for splitting bills with email notifications and financial goal setting with progress tracking and saving projections.",
-      technologies: ["React", "Node.js", "MongoDB", "Express", "Next.js", "Next-Auth", "Mongoose"],
-      github: "https://github.com/HafeezaBegum/SpartanBudget",
-      backgroundImage: budgetBg,
-      demo: "https://spartanbudgetfe-reshmas-projects-f978a53e.vercel.app/"
-    },
-    {
-      title: "High-Performance CNN for Real-Time Traffic Sign Recognition",
-      description: "Designed and implemented a Convolutional Neural Network (CNN) to perform real-time traffic sign recognition using the GTSRB dataset. The project evaluated three training strategies—Single-GPU, Multi-GPU, and Multi-Node Distributed Training—on an HPC cluster with NVIDIA GPUs. Leveraged TensorFlow’s MirroredStrategy and MultiWorkerMirroredStrategy to scale training across GPUs and compute nodes. Achieved over 94% test accuracy while reducing training time by ~45% from single-GPU to multi-node setup. Focused on system efficiency, distributed coordination, performance tuning, and generalization stability.",
-      technologies: ["Python", "TensorFlow", "Keras","Matplotlib","HPC", "NVIDIA L40S GPUs"],
-      github: "https://github.com/HafeezaBegum/High-Performance-CNN-for-Real-Time-Traffic-Sign-Recognition",
-      backgroundImage: cnnBg
-    },
-   
-  ];
-  
-  export default projectsData;
-  
+  {
+    title: "LyriSense: Thematic Song Classification using BERT & Distributed NLP",
+    image: "music",
+    featured: true,
+    categories: ["NLP & LLMs", "HPC"],
+    metric: "94% val. accuracy",
+    summary:
+      "Classifies 28K song lyrics into 7 themes using BERT, trained on multiple GPUs on an HPC cluster.",
+    description:
+      "Built a classifier that sorts 28,362 song lyrics (1950–2019) into 7 themes such as Sadness, Violence and Romantic, using BERT embeddings with dense layers on top. Validation accuracy rose from 90.0% after the first epoch to 94.0% after the third. Scaled training with TensorFlow's MultiWorkerMirroredStrategy on 2 GPUs on CWRU's Pioneer HPC cluster, synchronizing gradients via all-reduce. The NLP pipeline covered cleaning, de-duplication, WordPiece tokenization, attention masks and 128-token sequences, and class imbalance was handled with over- and undersampling, dropout and early stopping. Built for the High Performance Data & Computing course at CWRU.",
+    technologies: ["Python", "TensorFlow", "BERT", "Hugging Face Transformers", "NLP", "HPC", "Multi-GPU Training"],
+    github: "https://github.com/HafeezaBegum/Thematic-Song-Classification-using-BERT-Distributed-NLP",
+  },
+  {
+    title: "High-Performance CNN for Real-Time Traffic Sign Recognition",
+    image: "cnn",
+    featured: true,
+    categories: ["Machine Learning", "HPC"],
+    metric: "~45% faster training",
+    summary:
+      "Traffic sign recognition CNN, compared across single-GPU, multi-GPU and multi-node training.",
+    description:
+      "Designed and implemented a Convolutional Neural Network (CNN) to perform real-time traffic sign recognition using the GTSRB dataset. The project evaluated three training strategies (Single-GPU, Multi-GPU, and Multi-Node Distributed Training) on an HPC cluster with NVIDIA GPUs. Leveraged TensorFlow's MirroredStrategy and MultiWorkerMirroredStrategy to scale training across GPUs and compute nodes. Achieved over 94% test accuracy while reducing training time by ~45% from single-GPU to multi-node setup. Focused on system efficiency, distributed coordination, performance tuning, and generalization stability.",
+    technologies: ["Python", "TensorFlow", "Keras", "SLURM", "HPC", "NVIDIA L40S GPUs", "Matplotlib"],
+    github: "https://github.com/HafeezaBegum/High-Performance-CNN-for-Real-Time-Traffic-Sign-Recognition",
+  },
+  {
+    title: "Machine Learning Pipeline for Robust Fraud Detection",
+    image: "fraud",
+    featured: true,
+    categories: ["Machine Learning", "Data Engineering"],
+    metric: "SHAP + Flask app",
+    summary:
+      "Credit card fraud detection with several ML models, SHAP explanations and a Flask app for predictions.",
+    description:
+      "Developed a robust machine learning pipeline for credit card fraud detection, encompassing comprehensive exploratory data analysis (EDA), duplicate record elimination, and missing value imputation. Critically addressed severe class imbalance through SMOTE oversampling to enhance model generalization. Engineered, trained, and compared Logistic Regression, Random Forest (tuned with GridSearchCV), XGBoost and a Keras deep learning model, selecting the best model by ROC AUC alongside confusion matrices and classification reports. Used SHAP (SHapley Additive exPlanations) to explain predictions and rank the features driving fraud risk, and deployed the final model in a Flask web app that scores transactions entered by users.",
+    technologies: ["Python", "Scikit-learn", "XGBoost", "Keras", "SHAP", "imbalanced-learn", "Flask", "Pandas", "NumPy", "Matplotlib"],
+    github: "https://github.com/HafeezaBegum/Machine-Learning-Pipeline-for-Robust-Fraud-Detection",
+  },
+  {
+    title: "Co-Purchasing Analysis and Recommendation System",
+    image: "recommendation",
+    categories: ["Machine Learning", "Graph ML"],
+    metric: "96.4% link-prediction accuracy",
+    summary:
+      "Analyzed Amazon co-purchase data (548K products) for communities, book recommendations and link prediction.",
+    description:
+      "Explored product recommendations and link prediction using graph-based methods on the SNAP Amazon co-purchase dataset (548,552 products, 1,788,725 co-purchase links). Utilized network analysis to examine structural characteristics like degree centrality, betweenness centrality, and clustering coefficient. Employed community detection algorithms, specifically Girvan-Newman and Louvain, to identify clusters of frequently co-purchased products and derive insights into customer behavior. Developed a book recommendation system based on Jaccard similarity and co-purchase patterns. Louvain community detection reached a modularity of 0.79, versus 0.21 for Girvan-Newman. For link prediction, compared a Graph Neural Network (SAGEConv) with Logistic Regression, Decision Tree, Random Forest and SVM: Random Forest performed best at 96.4% accuracy and 0.948 ROC AUC, while the GNN struggled with the sparse graph.",
+    technologies: ["Python", "NetworkX", "Pandas", "PyTorch Geometric", "Scikit-learn"],
+    github: "https://github.com/HafeezaBegum/Co-Purchasing-Analysis-and-Recommendation-System",
+  },
+  {
+    title: "Spartan Budget",
+    image: "budget",
+    categories: ["Web"],
+    metric: "Full-stack app",
+    summary:
+      "Student budgeting app with expense categories, shared bills with email notifications and savings goals.",
+    description:
+      "A budget tracking application designed to help students manage income, expenses, and account balances by categorizing and logging financial transactions. Features include expense logging with predefined categories (e.g., Food, Rent, Tuition), tracking account balances, and data visualizations (pie charts and bar graphs) for financial health. The application also includes student-targeted features such as a shared expense tracker for splitting bills with email notifications and financial goal setting with progress tracking and saving projections. Deployed on Vercel and Render.",
+    technologies: ["React", "Next.js", "Node.js", "Express", "MongoDB", "Redux", "Material UI", "NextAuth", "Jest"],
+    github: "https://github.com/HafeezaBegum/SpartanBudget",
+    demo: "https://spartanbudgetfe-reshmas-projects-f978a53e.vercel.app/",
+  },
+  {
+    title: "Interactive Personal Portfolio with AI Assistant",
+    image: "portfolio",
+    categories: ["Web", "NLP & LLMs"],
+    metric: "You're here",
+    summary:
+      "My portfolio site, with a chat assistant and a job-fit checker that run in the browser.",
+    description:
+      "Designed and built this portfolio in React with a custom design system (light/dark themes), a command palette, animated sections and data-driven content. It ships an 'Ask my portfolio' assistant that runs retrieval over structured portfolio data entirely in the browser, plus a job-description fit analyzer. The assistant combines intent detection for common recruiter questions with BM25 search, and every answer links back to the section it came from.",
+    technologies: ["React", "JavaScript", "CSS", "BM25 Retrieval", "NLP", "GitHub Pages"],
+    github: "https://github.com/HafeezaBegum/My-Portfolio",
+    demo: "https://hafeezabegum.github.io/My-Portfolio/",
+  },
+];
+
+export default projectsData;

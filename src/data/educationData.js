@@ -1,0 +1,47 @@
+const educationData = [
+  {
+    school: "Case Western Reserve University",
+    link: "https://case.edu",
+    logo: "case",
+    degree: "Master of Science in Computer Science",
+    duration: "2023 – 2025",
+    grade: "CGPA 3.6 / 4",
+    coursework: [
+      "Artificial Intelligence",
+      "Machine Learning on Graphs",
+      "AI: Probabilistic Graphical Models",
+      "Data Privacy",
+      "Database Systems",
+      "Computer Security",
+      "Software Engineering",
+      "High Performance Data & Computing",
+      "Designing High-Performant Systems for AI",
+      "Data Science Systems",
+    ],
+  },
+  {
+    school: "BMS College of Engineering",
+    link: "https://www.bmsce.ac.in",
+    logo: "bms",
+    degree: "Bachelor of Engineering in Electronics and Communication",
+    duration: "2019 – 2023",
+    grade: "CGPA 9.0 / 10",
+    coursework: [
+      "C Programming",
+      "OOP using C++",
+      "Python",
+      "Data Structures and Algorithms",
+      "Machine Learning",
+      "Digital Signal Processing",
+      "Linear Algebra",
+      "Computer Communication Networks",
+      "Network Security & Cryptography",
+      "Embedded System Design",
+      "Microcontrollers",
+      "Internet of Things",
+      "Project Management and Finance",
+    ],
+  },
+];
+
+export default educationData;

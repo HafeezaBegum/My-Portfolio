@@ -1,56 +1,79 @@
-import React from "react";
-import { Link } from "react-scroll";
+import React, { useState } from "react";
+import { FiMoon, FiSun, FiMenu, FiX, FiSearch, FiMail } from "react-icons/fi";
+import { useActiveSection, useScrollY } from "../hooks";
+import profile from "../data/profile";
 
-const Navbar = () => {
-    const NAVBAR_HEIGHT_OFFSET = -50;
+export const NAV_ITEMS = [
+  { id: "experience", label: "Experience" },
+  { id: "education", label: "Education" },
+  { id: "projects", label: "Projects" },
+  { id: "skills", label: "Skills" },
+  { id: "ai", label: "AI Lab" },
+];
 
-    return (
-        <nav className="navbar navbar-expand-lg fixed-top navbar-custom-grey">
-            <div className="container">
-                <Link to="home" smooth duration={300} className="navbar-brand btn btn-link" offset={NAVBAR_HEIGHT_OFFSET}>
-                    My Portfolio
-                </Link>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
-                    <ul className="navbar-nav">
-                        <li className="nav-item">
-                            <Link activeClass="active" to="home" smooth duration={300} className="nav-link" offset={NAVBAR_HEIGHT_OFFSET}>Home</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link activeClass="active" to="education" smooth duration={300} className="nav-link" offset={NAVBAR_HEIGHT_OFFSET}>Education</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link activeClass="active" to="skills" smooth duration={300} className="nav-link" offset={NAVBAR_HEIGHT_OFFSET}>Skills</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link activeClass="active" to="projects" smooth duration={300} className="nav-link" offset={NAVBAR_HEIGHT_OFFSET}>Projects</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link activeClass="active" to="experience" smooth duration={300} className="nav-link" offset={NAVBAR_HEIGHT_OFFSET}>Experience</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link activeClass="active" to="certifications" smooth duration={300} className="nav-link" offset={NAVBAR_HEIGHT_OFFSET}>Certifications</Link>
-                        </li>
-                        <li className="nav-item">
-                            <a
-                                href="https://drive.google.com/file/d/1glqWO_WBXkNSGo1AAjVS9aFSfTVqcNyg/view?usp=sharing"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="nav-link"
-                            >
-                                Resume
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <Link activeClass="active" to="contact" smooth duration={300} className="nav-link" offset={NAVBAR_HEIGHT_OFFSET}>Contact</Link>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    );
+const IDS = ["home", ...NAV_ITEMS.map((n) => n.id), "certificates", "contact"];
+const isMac = typeof navigator !== "undefined" && /Mac|iPhone|iPad/.test(navigator.platform);
+
+const Navbar = ({ theme, onToggleTheme, onOpenPalette }) => {
+  const [open, setOpen] = useState(false);
+  const scrolled = useScrollY() > 12;
+  const active = useActiveSection(IDS);
+  const initials = profile.name
+    .split(" ")
+    .map((w) => w[0])
+    .join("");
+
+  return (
+    <header className={`nav ${scrolled || open ? "scrolled" : ""}`}>
+      <nav className="container nav-inner" aria-label="Primary">
+        <a href="#home" className="brand" onClick={() => setOpen(false)}>
+          <span className="brand-mark">{initials}</span>
+          <span>{profile.name}</span>
+        </a>
+
+        <ul className={`nav-links ${open ? "open" : ""}`}>
+          {NAV_ITEMS.map((n) => (
+            <li key={n.id}>
+              <a
+                href={`#${n.id}`}
+                className={active === n.id ? "active" : ""}
+                aria-current={active === n.id ? "true" : undefined}
+                onClick={() => setOpen(false)}
+              >
+                {n.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <div className="nav-actions">
+          <a href="#contact" className={`btn btn-primary btn-sm nav-cta ${active === "contact" ? "active" : ""}`} onClick={() => setOpen(false)}>
+            <FiMail aria-hidden="true" /> <span>Contact</span>
+          </a>
+          <button className="cmdk-trigger" onClick={onOpenPalette} aria-label="Open command palette">
+            <FiSearch />
+            <span className="cmdk-label">Search</span>
+            <span className="kbd">{isMac ? "⌘" : "Ctrl"} K</span>
+          </button>
+          <button
+            className="icon-btn"
+            onClick={onToggleTheme}
+            aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
+          >
+            {theme === "dark" ? <FiSun /> : <FiMoon />}
+          </button>
+          <button
+            className="icon-btn menu-btn"
+            onClick={() => setOpen((o) => !o)}
+            aria-label="Toggle menu"
+            aria-expanded={open}
+          >
+            {open ? <FiX /> : <FiMenu />}
+          </button>
+        </div>
+      </nav>
+    </header>
+  );
 };
 
 export default Navbar;

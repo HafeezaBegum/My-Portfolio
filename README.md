@@ -1,64 +1,51 @@
-# Interactive Personal Portfolio
+# Hafeeza Begum | Portfolio
 
-This is a responsive and visually elegant portfolio website built with **React**. It showcases my educational background, technical skills, projects, experience, and certifications, aimed at highlighting my expertise in **AI, Machine Learning, Data Engineering, and Software Development**.
+A fast, data-driven React portfolio for a Data Engineer / ML Engineer, with built-in AI tools for recruiters.
 
-🚀 **Live Demo**: [https://hafeezabegum.github.io/My-Portfolio](https://hafeezabegum.github.io/My-Portfolio)
+🚀 **Live**: [hafeezabegum.github.io/My-Portfolio](https://hafeezabegum.github.io/My-Portfolio)
 
----
+## Features
 
-## 📌 Features
+- **Ask my portfolio**: a chat assistant that answers questions about my experience and links to the section each answer came from.
+  It recognises common recruiter questions (skills, experience, education) and falls back to BM25 search, all in the browser.
+- **Job-fit analyzer**: paste a job description to see matched skills (with evidence from roles and projects) and gaps.
+- **Command palette** (`Ctrl/⌘ + K`) to jump to any section or project, copy my email, or switch theme.
+- Light / dark themes (follows the system setting, remembered per visitor, no flash on load).
+- Animated "data graph" hero, typewriter roles, scroll progress, and scroll-reveal animations (all respect *reduced motion*).
+- Filterable and searchable projects with detail modals, an experience timeline, and tabbed skills.
+- Contact form via Formspree with inline success and error states, plus spam honeypot.
+- SEO and social meta tags, JSON-LD `Person` schema, accessible landmarks, focus states and keyboard support.
 
-- Single-page application with smooth navigation
-- Responsive design for desktop and mobile
-- Modular sections: About, Education, Skills, Projects, Experience, Certifications, Contact
-- Interactive hover effects and transitions
-- Project descriptions with “Read More” toggle
-- Easy-to-update structure using JSON-based data
-- Deployed via GitHub Pages
+## Editing content
 
----
+All content lives in plain data files under [`src/data`](src/data). Edit them and the site and the assistant
+update together:
 
-## Tech Stack
+| File | What it holds |
+| --- | --- |
+| `profile.js` | Name, roles, bio, links, contact |
+| `experienceData.js` | Roles, dates, technologies |
+| `projectsData.js` | Projects, categories, headline metric, links |
+| `skillsData.js` | Skill categories and icons |
+| `educationData.js`, `certificationsData.js` | Education and certifications |
 
-- **Frontend**: React, Bootstrap, Custom CSS
-- **Icons**: React Icons
-- **Deployment**: GitHub Pages
-- **Tooling**: `gh-pages`, `npm`
+Images are referenced by key and mapped in [`src/assets/images.js`](src/assets/images.js).
 
----
-
-## Getting Started Locally
-
-### Prerequisites
-
-- Node.js (v14 or higher)
-- npm (v6 or higher)
-
-### Steps
+## Run locally
 
 ```bash
-git clone https://github.com/HafeezaBegum/My-Portfolio.git
-cd my-portfolio
 npm install
 npm start
 ```
 
-Visit http://localhost:3000 in your browser to see the app.
+Open http://localhost:3000/My-Portfolio. Run tests with `npm test`.
 
-### 🚀 Deployment on GitHub Pages
-This portfolio is deployed using GitHub Pages via the gh-pages package.
+## Deploy (GitHub Pages)
 
-#### Build and Deploy
 ```bash
-npm run build
 npm run deploy
 ```
-Make sure your package.json includes:
-```bash
-"homepage": "https://yourGithubUsername.github.io/My-Portfolio",
-"scripts": {
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
-}
-```
-Once pushed, the site will be live at the URL specified in the homepage field.
+
+## Tech
+
+React 19 · custom CSS design system · react-icons · Formspree · GitHub Pages
