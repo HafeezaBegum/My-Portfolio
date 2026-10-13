@@ -1,29 +1,21 @@
 {
   "files": {
-    "main.css": "/My-Portfolio/static/css/main.6f404b2e.css",
-    "main.js": "/My-Portfolio/static/js/main.ea187815.js",
-    "static/media/FraudDetection.png": "/My-Portfolio/static/media/FraudDetection.44c3497c213677cb1426.png",
-    "static/media/Recommendation.png": "/My-Portfolio/static/media/Recommendation.c2a8f9c3260894139bcc.png",
-    "static/media/music.png": "/My-Portfolio/static/media/music.1d4c1241a4f21776cc9f.png",
-    "static/media/case-logo.png": "/My-Portfolio/static/media/case-logo.549e5eef11c6e1d5af37.png",
-    "static/media/spartanBudget.png": "/My-Portfolio/static/media/spartanBudget.dc2fa6e61f157fab4dab.png",
-    "static/media/cnn.png": "/My-Portfolio/static/media/cnn.cdb3c9e51df7c1a0b923.png",
-    "static/media/portfolio.png": "/My-Portfolio/static/media/portfolio.cd6806ed5e0c67a16e6f.png",
-    "static/media/bms-logo.png": "/My-Portfolio/static/media/bms-logo.afdf0c308fe3cd27fef0.png",
-    "static/media/piSquare-logo.png": "/My-Portfolio/static/media/piSquare-logo.ce69377c3434df7e205b.png",
-    "static/media/my-picture.jpg": "/My-Portfolio/static/media/my-picture.d421a7c98530b4ea0612.jpg",
-    "static/media/Cisco.png": "/My-Portfolio/static/media/Cisco.74c86de080c1901a60ac.png",
-    "static/media/case-ga-logo.png": "/My-Portfolio/static/media/case-ga-logo.02f7bac6036b425ac9b7.png",
-    "static/media/aws.png": "/My-Portfolio/static/media/aws.2d8430c6e3a6b6382d44.png",
-    "static/media/DeepLearning.png": "/My-Portfolio/static/media/DeepLearning.f975171ca3c96eef91eb.png",
-    "static/media/GreatLearning.png": "/My-Portfolio/static/media/GreatLearning.aed83cb9265952a6690d.png",
-    "static/media/LinuxFoundation.png": "/My-Portfolio/static/media/LinuxFoundation.4ed6173d4f52618545ad.png",
+    "main.css": "/My-Portfolio/static/css/main.01d6be1f.css",
+    "main.js": "/My-Portfolio/static/js/main.876eb1eb.js",
+    "static/media/FraudDetection.webp": "/My-Portfolio/static/media/FraudDetection.86474bd74feebf5484b2.webp",
+    "static/media/music.webp": "/My-Portfolio/static/media/music.6a198311b35667fe31cb.webp",
+    "static/media/Recommendation.webp": "/My-Portfolio/static/media/Recommendation.ab8c23a1a4320e394e9f.webp",
+    "static/media/case-logo.png": "/My-Portfolio/static/media/case-logo.0ca62781358c09929903.png",
+    "static/media/spartanBudget.webp": "/My-Portfolio/static/media/spartanBudget.7d61cb550617d11d7ce5.webp",
+    "static/media/portfolio.webp": "/My-Portfolio/static/media/portfolio.50139d60fbe020778a51.webp",
+    "static/media/cnn.webp": "/My-Portfolio/static/media/cnn.3c6e518e2b8592c78c11.webp",
+    "static/media/bms-logo.png": "/My-Portfolio/static/media/bms-logo.70eaac7bd148982782cc.png",
     "index.html": "/My-Portfolio/index.html",
-    "main.6f404b2e.css.map": "/My-Portfolio/static/css/main.6f404b2e.css.map",
-    "main.ea187815.js.map": "/My-Portfolio/static/js/main.ea187815.js.map"
+    "main.01d6be1f.css.map": "/My-Portfolio/static/css/main.01d6be1f.css.map",
+    "main.876eb1eb.js.map": "/My-Portfolio/static/js/main.876eb1eb.js.map"
   },
   "entrypoints": [
-    "static/css/main.6f404b2e.css",
-    "static/js/main.ea187815.js"
+    "static/css/main.01d6be1f.css",
+    "static/js/main.876eb1eb.js"
   ]
 }
