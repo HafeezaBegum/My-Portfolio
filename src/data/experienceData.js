@@ -1,15 +1,15 @@
 // `logo` is a key into src/assets/images.js (null shows the company initial)
 const experienceData = [
   {
-    title: "Data Engineer",
+    title: "Software Engineer",
     company: "Cynvia Technologies",
     link: null,
     logo: null,
     duration: "June 2026 – Present",
     current: true,
     summary:
-      "Building data pipelines with Python and SQL, using PostgreSQL, Azure, Docker and Kubernetes.",
-    technologies: ["Python", "SQL", "PySpark", "dbt", "PostgreSQL", "ETL/ELT", "Azure", "Docker", "Kubernetes"],
+      "Building data pipelines and ML services with Python and SQL, using PostgreSQL, Azure, Docker and Kubernetes.",
+    technologies: ["Python", "SQL", "PySpark", "dbt", "PostgreSQL", "ETL/ELT", "Machine Learning", "Scikit-learn", "FastAPI", "Azure", "Docker", "Kubernetes"],
   },
   {
     title: "AI Researcher",
