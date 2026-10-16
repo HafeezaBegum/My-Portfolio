@@ -2,6 +2,7 @@ import React from "react";
 import Section, { Reveal } from "./Section";
 import { img } from "../assets/images";
 import experienceData from "../data/experienceData";
+import profile from "../data/profile";
 
 const ExperienceItem = ({ exp }) => {
   return (
@@ -48,6 +49,10 @@ const Experience = () => (
     title="Experience"
     subtitle="My roles so far, from AI research to data engineering, most recent first"
   >
+    <Reveal as="p" className="exp-intro">
+      {profile.experienceIntro}
+    </Reveal>
+
     <div className="timeline">
       {experienceData.map((exp) => (
         <ExperienceItem key={`${exp.company}-${exp.duration}`} exp={exp} />
