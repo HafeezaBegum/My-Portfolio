@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/My-Portfolio/static/css/main.01d6be1f.css",
-    "main.js": "/My-Portfolio/static/js/main.2ad0f33d.js",
+    "main.css": "/My-Portfolio/static/css/main.dcc08b11.css",
+    "main.js": "/My-Portfolio/static/js/main.863656b4.js",
     "static/media/FraudDetection.webp": "/My-Portfolio/static/media/FraudDetection.86474bd74feebf5484b2.webp",
     "static/media/music.webp": "/My-Portfolio/static/media/music.6a198311b35667fe31cb.webp",
     "static/media/Recommendation.webp": "/My-Portfolio/static/media/Recommendation.ab8c23a1a4320e394e9f.webp",
@@ -11,11 +11,11 @@
     "static/media/cnn.webp": "/My-Portfolio/static/media/cnn.3c6e518e2b8592c78c11.webp",
     "static/media/bms-logo.png": "/My-Portfolio/static/media/bms-logo.70eaac7bd148982782cc.png",
     "index.html": "/My-Portfolio/index.html",
-    "main.01d6be1f.css.map": "/My-Portfolio/static/css/main.01d6be1f.css.map",
-    "main.2ad0f33d.js.map": "/My-Portfolio/static/js/main.2ad0f33d.js.map"
+    "main.dcc08b11.css.map": "/My-Portfolio/static/css/main.dcc08b11.css.map",
+    "main.863656b4.js.map": "/My-Portfolio/static/js/main.863656b4.js.map"
   },
   "entrypoints": [
-    "static/css/main.01d6be1f.css",
-    "static/js/main.2ad0f33d.js"
+    "static/css/main.dcc08b11.css",
+    "static/js/main.863656b4.js"
   ]
 }
